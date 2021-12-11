@@ -1,0 +1,118 @@
+
+------------------------ Inicia nuevo combate ---------------------------
+Terreno de combate: Praderas
+Oponente:   -------------------------------- p1-imp
+Nivel actual del enemigo: 2   -------- Nivel actual de personaje: 10
+Nivel de ataque de enemigo: 2   ----- Nivel de ataque de personaje 4
+Nivel de defensa de enemigo: 3   ---- Nivel de defensa de personaje: 3
+Nivel de vida de enemigo: 3   ------- Nivel de vida de personaje: 75
+
+Acción
+Daño causado: 5
+Vida restante de p1-imp: 24
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+Acción
+Daño causado: 5
+Vida restante de p1-imp: 3
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+
+Puntos de vida actuales: 73
+----- Victoria -----
+Fin del combate
+-------------------------------------------------------------------
+
+Enemigo derrotado
+Acción
+Daño causado: 9
+Vida restante de p1-imp: 0
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+
+------------------------ Inicia nuevo combate ---------------------------
+Terreno de combate: Desierto
+Oponente:   -------------------------------- d2-cavenaga
+Nivel actual del enemigo: 2   -------- Nivel actual de personaje: 10
+Nivel de ataque de enemigo: 2   ----- Nivel de ataque de personaje 4
+Nivel de defensa de enemigo: 3   ---- Nivel de defensa de personaje: 3
+Nivel de vida de enemigo: 3   ------- Nivel de vida de personaje: 73
+
+Acción
+Daño causado: 6
+Vida restante de d2-cavenaga: 24
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+Acción
+Daño causado: 8
+Vida restante de d2-cavenaga: 9
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+
+Puntos de vida actuales: 73
+----- Victoria -----
+Fin del combate
+-------------------------------------------------------------------
+
+Enemigo derrotado
+Acción
+Daño causado: 9
+Vida restante de d2-cavenaga: 0
+Base de ataque: 40 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+Ataque aumentado 1 punto, nivel: 1
+Defensa aumentado 1 punto, nivel: 2
+Se compro:Poción de defensa, saldo: 80
+
+------------------------ Inicia nuevo combate ---------------------------
+Terreno de combate: Bosque
+Oponente:   -------------------------------- w2-redbone
+Nivel actual del enemigo: 2   -------- Nivel actual de personaje: 11
+Nivel de ataque de enemigo: 2   ----- Nivel de ataque de personaje 5
+Nivel de defensa de enemigo: 3   ---- Nivel de defensa de personaje: 3
+Nivel de vida de enemigo: 3   ------- Nivel de vida de personaje: 73
+
+------------------------ Cosumo de item ------------------------
+Poción de defensa utilizado
+Efecto: Aumento de defensa
+Fin de registro
+
+------------------------ Cosumo de item ------------------------
+Poción de defensa utilizado
+Efecto: Aumento de defensa
+Fin de registro
+
+Acción
+Daño causado: 4
+Vida restante de w2-redbone: 10
+Base de ataque: 50 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+
+Puntos de vida actuales: 73
+----- Victoria -----
+Fin del combate
+-------------------------------------------------------------------
+
+Enemigo derrotado
+Acción
+Daño causado: 12
+Vida restante de w2-redbone: 0
+Base de ataque: 50 ------ Defensa de Enemigo: 30
+Resultado: Ataque exitoso
+Fin de registro
+
+fin de test 12-8-2021 15 con 7

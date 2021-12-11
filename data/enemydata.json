@@ -1,0 +1,49 @@
+[
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":1,"cash":40,"itm":0,"sprite":"d1-scorpion",
+ "sfxint":"monster","sfxatk":"hit","sfxded":"vanish"},
+
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":1,"cash":40,"itm":0,"sprite":"d2-cavenaga",
+ "sfxint":"snakehiss","sfxatk":"bite","sfxded":"grito"},
+
+{"atk":4,"def":5,"hpp":80,"exp":60,"lvl":3,"cdt":180,
+ "terr":1,"cash":80,"itm":1,"sprite":"d3-procaryote",
+ "sfxint":"bubbles","sfxatk":"hit","sfxded":"vanish"},
+
+{"atk":5,"def":6,"hpp":120,"exp":70,"lvl":4,"cdt":240,
+ "terr":1,"cash":100,"itm":2,"sprite":"d4-sandworm",
+ "sfxint":"sandworm","sfxatk":"hit","sfxded":"vanish"},
+
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":2,"cash":40,"itm":0,"sprite":"w1-insectus",
+ "sfxint":"monster","sfxatk":"bite","sfxded":"vanish"},
+
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":2,"cash":40,"itm":0,"sprite":"w2-redbone",
+ "sfxint":"redbone","sfxatk":"sword","sfxded":"grito"},
+
+{"atk":4,"def":5,"hpp":80,"exp":60,"lvl":3,"cdt":180,
+ "terr":2,"cash":80,"itm":1,"sprite":"w3-gorgon",
+ "sfxint":"snakehiss","sfxatk":"bite","sfxded":"grito"},
+
+{"atk":5,"def":6,"hpp":120,"exp":70,"lvl":4,"cdt":240,
+ "terr":2,"cash":100,"itm":2,"sprite":"w4-tantala",
+ "sfxint":"growl female","sfxatk":"bite","sfxded":"grito"},
+
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":3,"cash":40,"itm":0,"sprite":"p1-imp",
+ "sfxint":"imp","sfxatk":"sword","sfxded":"grito"},
+
+{"atk":2,"def":3,"hpp":40,"exp":50,"lvl":2,"cdt":150,
+ "terr":3,"cash":40,"itm":0,"sprite":"p2-needler",
+ "sfxint":"roar","sfxatk":"bite","sfxded":"vanish"},
+
+{"atk":4,"def":5,"hpp":80,"exp":60,"lvl":3,"cdt":180,
+ "terr":3,"cash":80,"itm":1,"sprite":"p3-panther",
+ "sfxint":"roar","sfxatk":"bite","sfxded":"vanish"},
+
+{"atk":5,"def":6,"hpp":120,"exp":70,"lvl":4,"cdt":240,
+ "terr":3,"cash":100,"itm":2,"sprite":"p4-flameknight",
+ "sfxint":"knight","sfxatk":"sword","sfxded":"grito"}
+]

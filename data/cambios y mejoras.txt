@@ -1,0 +1,214 @@
+Actualizado al 27 de noviembre de 2021.
+Esta es la lista de cambios y mejoras al juego respecto de la 
+versión de la última práctica. Aquellos con la leyenda (P) aún
+no son implementados, pero están en una lista de "tareas 
+por hacer".
+
+* Ahora se pueden consumir las pociones sencilla y completa en 
+  el mapa, se puede hacer con click sobre los items o con el
+  teclado, la "E" para una poción sencilla y "R" para la poción
+  completa. También incluyen efecto de sonido. Los tónicos no
+  se pueden consumir en el mapa, puesto que no hay combate en
+  esa pantalla.
+
+* Todas las pantallas tienen música.
+
+* Se ajustó la posición de las barras de vida y tiempo de los 
+  enemigos, basados en la altura del sprite, para que no queden 
+  encimados sobre el sprite del mismo.  
+
+* Se programó la transición en caso de subir de nivel y la
+  pantalla correspondiente. Ahora se puede elegir un incremento
+  de un punto a solo un atributo.
+
+* Se definó un valor en config.dat para la bonificación del
+  tónico, esto con propósitos de calibración. Se sustituyó el
+  valor que estaba programado directo por la referencia a la
+  variable correspondiente.
+
+* Se definió un valor en config.dat para el cálculo del 
+  número de puntos de vida por cada nivel asignado al atributo
+  correspondiente. De igual forma es para propósitos de 
+  calibración. También se sustituyó el valor de uso directo en
+  el código por la variable correspondiente.
+
+* Se modificó la pantalla de creación para elegir dos items 
+  como inventario inicial del personaje. Solo se puede iniciar el
+  juego si se han usado todos los puntos de nivel y se han 
+  elegido los dos items.
+
+* Se agregaron más enemigos en enemydata.json. Están 
+  organizados por el tipo de terreno. Adicionalmente se creó una
+  función para elegir de forma aleatoria entre las opciones por
+  tipo de terreno. Hay cuatro enemigos distintos en cada tipo de
+  terreno. (al momento no están balanceados)
+
+* Se implementó la animación con sprites (en modo gráfico
+  avanzado) del personaje principal cuando camina por el mapa.
+  NOTA: Se mueve todavía a "brincos".
+
+* Se eliminó el atajo de teclado de + y - para cambiar entre
+  pantallas, puesto que ya se navega por todas las pantallas con
+  acciones del juego o interfaz.
+
+* Se corrigió un bug donde, si el enemigo igualaba la tirada al
+  momento de atacar, se escuchaba el efecto de ataque, pero el 
+  personaje no sufría daño. Además se agregó un efecto de sonido
+  cuando el jugador evita el daño por el ataque.
+
+* Se modificó de nuevo el enemydata.json para incluir el
+  efecto de sonido que corresponde a la aparición del enemigo,
+  del ataque que realiza cuando es exitoso y cuando muere. Esto
+  adicionalmente requirió una función que selecciona el efecto
+  correspondiente.
+
+* Se agregaron efectos de sonido en los ClickItems de la
+  pantalla de creación y en la de Subir Nivel.
+
+* Se implementó control con teclado en la pantalla de tienda
+  para cambiar el modo de comercio y los items a comprar.
+  Los controles de teclado para la pantalla son:
+  1         comercia poción
+  2         comercia poción llena
+  3         comercia tónico
+  (espacio) cambiar modo de comercio
+  x         salir de tienda
+
+* Se implementó el archivo de bitácora para el testeo. 
+  Es necesario que cada equipo programe en donde necesite las 
+  llamadas para la carga de datos en la bitácora. Esto es así
+  puesto que cada equipo enfrentará retos de programación 
+  distintos. Es la única clase que sí estará documentada a fondo
+  para que tengan una idea de cómo usarla.
+  NOTA MUY IMPORTANTE: para que se genere de forma correcta el
+  archivo de bitácora, se debe salir del juego de forma 
+  ordenada, es decir desde el botón salir de la pantalla de
+  intro.
+  Se pone como ejemplo de uso para registro de las compras y
+  ventas en la pantalla de tienda. El código correspondiente 
+  estará comentado para que se entienda con mayor rapidez.
+
+* Se implementó una animación básica del personaje en la pantalla
+  de combate. Esto de forma temporal pero como preparativo para
+  las animaciones extra del combate.
+
+* Se implementó un fin de juego con victoria al alcanzar el 
+  nivel 10, de forma temporal. Al momento los incrementos de nivel 
+  ocurren cada 100 puntos de experiencia.
+
+* Se creó un archivo para almacenar un mapa de mayor tamaño. 
+  Al momento es de 20x20 casillas, pero soporta tamaños 
+  diferentes. Los valores de tamaño se guardan en el mismo 
+  archivo. Para cargar el mapa se creó la clase MapLoader, misma 
+  que se puede aprovechar para crear varios mapas. Esto puede ser
+  útil por ejemplo si en el juego se desea que se pueda entrar a
+  un castillo o a otra isla. En esos casos puede ser útil crear
+  una pantalla de transición.
+  Además se creó un control de cámara para poder mostrar
+  la parte del mapa que corresponda. Adicionalmente se implementó 
+  una función para ajustar el movimiento del personaje relativo 
+  al centro de la pantalla o los bordes según ocurra al moverse.
+  
+* Se añadió en config.dat el nivel base del personaje, el cual es 
+  tres veces el valor mínimo de atributos más el número de puntos
+  por asignar, en el caso de la configuración actual es 7, por 
+  ello entonces el nivel para ganar será el 10 de forma temporal
+  y finalmente será 20. Este nivel también se configura en el
+  archivo config.dat.
+
+* Se implementó una clase Dado, la cual permite crear dados de
+  tamaños distintos a los estándar, posee dos constructores, uno 
+  para dados "normales" es decir que cada cara posee un valor
+  distinto, pero es idóneo para definir dados de, por ejemplo,
+  9, 15, 7 caras. Y el segundo constructor permite crear dados 
+  especiales, donde algunas caras poseen valores repetidos y con
+  distinto número de caras por valor. Se incluye en el código de
+  la clase un ejemplo de uso. Ambos tipos de dados también 
+  permiten identificar tiradas críticas, al obtener el valor
+  mínimo o máximo posible en la tirada.
+
+* Se agregó código en la clase TiraDado para identificar
+  tiradas críticas, tanto mínima como máxima en los dados
+  sencillos, la tirada de moneda no posee esta característica.
+
+* Se definió en la clase TiraDados un método para indicar los
+  valores círiticos mínimo y máximo, con esto solo es necesario
+  incluir las llamadas a setCriticValues(lo,hi) con sus dos 
+  parámetros y posteriormente a checkCriticValues(n) para asignar
+  a cada posible valor crítico. Al ser un proceso común para las
+  tiradas básicas, se implementó una función genérica.
+
+* Se agregó el título de la ventana del juego y un icono.
+
+* Se implementó la animación con sprites del efecto activo
+  del tónico. Debió implementarse una clase especial de 
+  animación y de carga de archivos, puesto que cada nivel de 
+  tónico posee un set particular de sprites, por ser una 
+  animación en cada nivel del tónico. También se corrigió un bug,
+  donde si un combate terminaba con el tónico activo, el siguiente
+  combate continuaba con el tónico activo.
+
+* Se corrigió el potencial problema si el mapa se muestra en un
+  tamaño distinto de 20.
+  NOTA: para que funcione bien, las medidas del mapa deben estar
+  en múltiplos de 10, es decir que es válido 40x60, por ejemplo.
+  Esto se debe a que se usan residuos de 10 para que se calcule 
+  correctamente la posición en las orillas de abajo y a la 
+  derecha.
+  Se presentan dos archivos de mapa: 
+  worldmap.dat, es un mapa de 20x30 y es el que usa el juego
+  worldmap - copia.dat, mapa de 30x30.
+
+* Se reorganizó el código de diversos módulos, con la intención
+  de hacer más comprensible la estructura de las clases.
+
+* Se identificaron y recodificaron diversos métodos con el 
+  propósito de eficentar código.
+
+* Se reemplazaron todos los valores relacionados con las medidas
+  de sprites de items, iconos, terreno y personaje con los 
+  valores ss, hs y sp, del mismo modo que se adecuó para la 
+  versión 700x700.
+
+* Se definieron constantes de color para botones y otros 
+  componentes. Se implementó un método cuando fill y stroke
+  usan el mismo color. Y otro sobrecargado con el mismo nombre
+  para cuando se usan dos colores distintos. El código aun 
+  contiene llamadas a stroke y fill cuando solo se desea afectar
+  a uno de los valores.
+
+* Se implementó un video en la pantalla de Créditos.
+
+* Se implementó un modelo para tener una probabilidad distinta
+  en la selección del tipo de enemigo en un terreno dado, toma en
+  cuenta además el nivel del personaje, para que conforme progrese
+  tiendan a aparecer enemigos más peligrosos. Para lograr esto se
+  creó una nueva clase, DatosDados, que se liga al archivo 
+  "dicedata.dat" ahí están definidos los dados para los distintos
+  niveles de progreso del juego: EASY,MED,HARD. Al momento los 
+  cambios de dado ocurren en el nivel 13 y 17.
+
+* Cada vez que el personaje suba de nivel se incrementará el valor
+  límite para poder ganar otro nivel, es decir que si para el
+  primer incremento de nivel se requieren 100 de experiencia, para
+  el siguiente serán 200, para el siguiente 300, etc. Ese valor
+  de incremento es configurable en config.dat.
+
+* (P) Se implementó un caminado más suave entre casillas cuando 
+  el personaje se mueve en el mapa. Se desplazó lentamente el 
+  mapa cuando se camina para mejorar la ilusión de movimiento.
+
+* (P) Se implementaron animaciones de entrada, combate y
+  resultado de los combates.
+
+* (P) Se implementó la posibilidad de varios enemigos en los
+  combates, es posible tener hasta tres enemigos, diferentes o
+  iguales, en cada batalla.
+
+* (P) Se implementó un jefe final cuando se alcance el nivel 20.
+  Se modificó la programación para generar el enemigo específico
+  tras ascender al nivel indicado. Al vencerlo se procede a la 
+  pantalla de fin de juego con victoria.
+
+* (P) Se ajustan los valores del juego para definir la dificultad.
+
